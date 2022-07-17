@@ -1,6 +1,7 @@
 package study_java;
 
 import java.util.Calendar;
+import java.util.Arrays;
 import java.util.*; //これは上記包括している。　
 
 public class Paiza {
@@ -214,20 +215,121 @@ public class Paiza {
 
         // System.out.println("End");
 
-        int[] point = { 75, 94, 68 };
-        String[] names = { "鈴木", "本田", "遠藤" };
-        int i = 0;
+        // int[] point = { 75, 94, 68 };
+        // String[] names = { "鈴木", "本田", "遠藤" };
+        // int i = 0;
 
-        for (String name : names) {
-            System.out.print(name + "さんは");
-            if (point[i] > 90) {
-                System.out.println("判定Aです");
-            } else if (point[i] > 70) {
-                System.out.println("判定Bです");
-            } else {
-                System.out.println("判定Cです");
-            }
-            i += 1;
-        }
+        // for (String name : names) {
+        // // 拡張for文は一つのコレクションに対してのみ使える
+        // // String name, int point : names, points
+        // // とかは出来ない。
+        // System.out.print(name + "さんは");
+        // if (point[i] > 90) {
+        // System.out.println("判定Aです");
+        // } else if (point[i] > 70) {
+        // System.out.println("判定Bです");
+        // } else {
+        // System.out.println("判定Cです");
+        // }
+        // i += 1;
+        // }
+
+        // int num = 2;
+
+        // switch (num) {
+        // case 1:
+        // case 3:
+        // case 5:
+        // System.out.println("大当たり");
+        // break;
+        // case 2:
+        // case 4:
+        // System.out.println("残念賞");
+        // break;
+        // default:
+        // System.out.println("error");
+        // }
+
+        // // 配列とその個数を初期設定で登録
+        // int[] result = new int[3];
+
+        // // 各配列に数値を挿入
+        // result[0] = 75;
+        // result[1] = 88;
+        // result[2] = 82;
+
+        // for (int date : result) {
+        // System.out.println(date);
+        // }
+
+        // int[][] num = new int[2][3];
+
+        // // num[0] = new int[3];
+        // // num[1] = new int[3];
+
+        // num[0][0] = 87;
+        // num[0][1] = 58;
+        // num[0][2] = 72;
+
+        // num[1][0] = 74;
+        // num[1][1] = 92;
+        // num[1][2] = 81;
+        // System.out.println(num[1][2]);
+        // Arrays.fill(num[1], 10);
+        // Arrays.fill(num, new int[4]);
+
+        // System.out.println(num[1][3]);
+
+        // int[] src = { 12, 24, 18 };
+        // int[] dst = Arrays.copyOf(src, 4);
+
+        // for (int d : dst) {
+        // System.out.println("dst:" + d);
+        // }
+
+        // int[][][] a = new int[2][2][2];
+        // int[][][] b = new int[2][2][2];
+        // a[0][0][0] = 000;
+        // a[0][0][1] = 001;
+        // a[0][1][0] = 010;
+        // a[0][1][1] = 011;
+        // a[1][0][0] = 100;
+        // a[1][0][1] = 101;
+        // a[1][1][0] = 110;
+        // a[1][1][1] = 111;
+
+        // b[0][0][0] = 000;
+        // b[0][0][1] = 001;
+        // b[0][1][0] = 010;
+        // b[0][1][1] = 011;
+        // b[1][0][0] = 100;
+        // b[1][0][1] = 101;
+        // b[1][1][0] = 110;
+        // b[1][1][1] = 111;
+
+        // System.out.println(Arrays.deepToString(b));
+
+        // System.out.println(Arrays.deepEquals(a, b));
+
+        // String str = "24";
+        // Integer i = Integer.valueOf(str);
+        // System.out.print(i * 2);
+
+        // String msg = "ABCDE";
+        // System.out.print(msg.charAt(1) - msg.charAt(2));
+        // System.out.print('A' - 'C');
+        // // charAtはcharを持って来ていて、charは算術演算可能
+
+        // String msg = " ";
+        // System.out.println("[" + msg + "]");
+        // System.out.println("[" + msg.strip() + "]");
+
+        String[] msgs = { "One", "Two", "Three=" };
+        String msg = String.join("-", msgs);
+        System.out.println(msg);
+        System.out.println(msg.indexOf("e", 3));
+        String regex = "-|=";
+        System.out.println(msg.replaceAll(regex, ""));
+
     }
 }
